@@ -1,0 +1,20 @@
+<section class="container">
+<h1>Kontak</h1>
+
+<p>Admin: 0812-3456-7890</p>
+
+<form action="hasil.html" onsubmit="simpan()">
+<input type="text" name="nama" placeholder="Nama" required><br><br>
+<input type="email" name="email" placeholder="Email" required><br><br>
+<button type="submit">Kirim</button>
+</form>
+</section>
+
+<script>
+function simpan(){
+let nama=document.querySelector('[name="nama"]').value;
+let email=document.querySelector('[name="email"]').value;
+
+localStorage.setItem("user",JSON.stringify({nama,email}));
+}
+</script>
