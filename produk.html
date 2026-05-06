@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Produk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<h2>GreenLeaf 🌿</h2>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="produk.html">Produk</a></li>
+<li><a href="kontak.html">Kontak</a></li>
+</ul>
+</nav>
+
+<section class="container">
+<h1>Produk Tanaman</h1>
+
+<div class="produk">
+<img src="https://images.unsplash.com/photo-1598887142487-4a2b3d0c3b77">
+<h3>Monstera</h3>
+<p>Tanaman hias daun lebar yang cantik.</p>
+<p>Rp 80.000</p>
+<button onclick="tambah('Monstera',80000)">Beli</button>
+</div>
+
+<div class="produk">
+<img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb">
+<h3>Kaktus Mini</h3>
+<p>Tanaman kecil mudah dirawat.</p>
+<p>Rp 30.000</p>
+<button onclick="tambah('Kaktus Mini',30000)">Beli</button>
+</div>
+
+<div class="produk">
+<img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f">
+<h3>Lidah Mertua</h3>
+<p>Menyerap polusi udara.</p>
+<p>Rp 50.000</p>
+<button onclick="tambah('Lidah Mertua',50000)">Beli</button>
+</div>
+
+<div class="produk">
+<img src="https://images.unsplash.com/photo-1616627981456-5b6e1f9c8f60">
+<h3>Aglaonema</h3>
+<p>Daun warna-warni menarik.</p>
+<p>Rp 90.000</p>
+<button onclick="tambah('Aglaonema',90000)">Beli</button>
+</div>
+
+<div class="produk">
+<img src="https://images.unsplash.com/photo-1598887142487-4a2b3d0c3b77">
+<h3>Philodendron</h3>
+<p>Tanaman indoor populer.</p>
+<p>Rp 70.000</p>
+<button onclick="tambah('Philodendron',70000)">Beli</button>
+</div>
+
+<br>
+<a href="keranjang.html">🛒 Lihat Keranjang</a>
+
+</section>
+
+<script>
+function tambah(nama,harga){
+let data=JSON.parse(localStorage.getItem("cart"))||[];
+data.push({nama,harga});
+localStorage.setItem("cart",JSON.stringify(data));
+alert("Ditambahkan ke keranjang");
+}
+</script>
+
+</body>
+</html>
